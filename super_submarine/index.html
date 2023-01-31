@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<title>super submarine!</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js" integrity="sha512-kgjZw3xjgSUDy9lTU085y+UCVPz3lhxAtdOVkcO4O2dKl2VSBcNsQ9uMg/sXIM4SoOmCiYfyFO/n1/3GSXZtSg==" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/three@v0.103.0/examples/js/utils/SkeletonUtils.js"></script>
+		<script src='../libs/GLTFLoader.js'></script>
+		<script src="../libs/threex.keyboardstate.js"></script>
+		<script src="../libs/OrbitControls.js"></script>
+		<script src="../libs/utils.js"></script>
+		<script src="../libs/stats.js"></script>
+		<script src="../libs/water-material.js"></script>
+	</head>
+	
+	<style>
+		canvas{
+			display: block;
+			border: 1px solid #000;
+		}
+		#container{
+			width: 1200px;
+			height: 800px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		#instructions{
+			font-family: monospace;
+			text-align: center;
+		}
+	</style>
+	
+	<body>
+		<div id='container'>
+		</div>
+		<div id='instructions'>
+			<h3> controls: </h3>
+			<p> w,a,s,d to move forward, left, backwards and right. q,e to roll left/right. up and down arrow to move up and down. shift to change camera view. x to turn on a spotlight. </p> 
+		</div>
+	</body>
+	
+	<script src="index.js">
+	</script>
+
+</html>

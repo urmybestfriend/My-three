@@ -1,0 +1,43 @@
+airshow!
+
+I love airshows and military aircraft. the one featured here is an f-18. hopefully I will build some more military aircraft to assemble
+some static displays! :D
+
+
+notes:
+- so when the f-18 controlled by the user reaches some vertical angle ( > 90 deg), the camera flips. not a big deal, but interesting.
+
+  looks like the issue is with lookAt()
+  this might help: https://discourse.threejs.org/t/solved-lookat-flips-cam-rotation-180-degrees-how-do-i-remove-this/2066/3
+  and this: https://github.com/mrdoob/three.js/issues/688
+
+  this dicussion also looks interesting: https://github.com/mrdoob/three.js/issues/1460
+
+- a more pressing matter is the way I handle rolls with Q and E. i'm manipulating the actual jet's mesh so the axis can get misaligned relative
+to the group object it's a child of, which then makes all my controls inverted. but it does make sense that that should happen but at 
+the same time I'm not really sure what a proper experience should be like thinking about it more. maybe I'll reinstall BF2 and take a look :) 
+
+- also, when I put the f18 in a group object the rolling behavior is exactly what i want. but when i try using just the f18 mesh itself,
+  the rotation is not as good, i.e. it feels like there's some offset, rather than rotating the jet as if the z-axis was going through the 
+  middle of it. not really sure why but that's something to look into.
+// https://stackoverflow.com/questions/28848863/threejs-how-to-rotate-around-objects-own-center-instead-of-world-center
+
+todo:
+- better lighting + clouds
+- basic f-18 animations like:
+	- flaps
+	- rudders
+	- landing gear deploy/retraction on key press
+- allow user to switch between aircraft
+- more camera modes
+- make more planes for static displays! 
+	-ideas: c-17, c-5, f-15, f-14 (even though retired lol), f-22, av-8b, p-8, tanks are good too, helicopters!!
+
+textures:
+http://hoodavirender.blogspot.com/2012/03/seamless-grass-texture.html
+borrowed top-view of Andrews Air Force Base from Google Maps
+https://www.goodfreephotos.com/united-states/colorado/rocky-mountains-national-park/colorado-rocky-mountains-national-park-mountains-in-the-horizon.jpg.php
+https://www.photos-public-domain.com/2011/03/02/blue-sky-with-white-clouds-texture/
+
+http://www.aerodynamics4students.com/aircraft-performance/take-off-and-landing.php
+https://aviation.stackexchange.com/questions/9961/does-acceleration-increase-linearly-on-a-takeoff-roll
